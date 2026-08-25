@@ -1,5 +1,6 @@
 package com.Calc.calculator.Model;
 
+import com.Calc.calculator.enums.Gender;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import lombok.Setter;
 public class Person {
     private String name;
     private int age;
+    @Getter
     private Gender Gender;
 
     public Person(String name, int age,Gender gender) {
