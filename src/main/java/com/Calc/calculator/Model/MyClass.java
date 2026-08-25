@@ -1,7 +1,5 @@
 package com.Calc.calculator.Model;
 
-import java.util.List;
-
 public class MyClass {
 
     private long id;
