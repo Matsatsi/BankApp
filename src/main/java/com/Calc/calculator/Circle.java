@@ -1,14 +1,11 @@
 package com.Calc.calculator;
 
-import com.Calc.calculator.Model.Gender;
 import com.Calc.calculator.Model.Person;
-import org.springframework.boot.SpringApplication;
+import com.Calc.calculator.enums.Gender;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class Circle {
@@ -16,11 +13,22 @@ public class Circle {
 
         List<Person> people = addPerson();
 
+        //filter
         List<Person> elders = people.stream()
                 .filter(pips -> pips.getAge() > 50)
                 .toList();
 
-        elders.forEach(System.out::println);
+        //sort
+        List<Person> sort = people.stream()
+                        .sorted(Comparator.comparing(Person::getAge)).toList();
+        //all match
+        //List<Person> match = people.stream().anyMatch(person -> people.contains(Gender.FEMALE))
+        //any match
+        //non match
+        //max
+        //min
+
+        //people.forEach(System.out::println);
     }
     public static List<Person> addPerson(){
 
