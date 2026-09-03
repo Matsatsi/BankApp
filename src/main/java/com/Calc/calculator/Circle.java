@@ -1,6 +1,7 @@
 package com.Calc.calculator;
 
 import com.Calc.calculator.Model.Person;
+import com.Calc.calculator.Model.Reusable;
 import com.Calc.calculator.enums.Gender;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,6 +12,12 @@ import java.util.List;
 public class Circle {
 	public static void main(String[] args) {
 
+        /**Generics*/
+        Reusable<String> name = new Reusable<>("Germy");
+        Reusable<Integer> age = new Reusable<>(23);
+        //***************************************************
+
+        /**Streams*/
         List<Person> people = addPerson();
 
         //filter
@@ -39,5 +46,9 @@ public class Circle {
                new Person("Matsatsi",7, Gender.MALE),
                new Person("Mina",68, Gender.MALE));
 
+    }
+    //Generic methods and WildCards used
+    public static <T> void print(List<?> t){
+        System.out.println(t);
     }
 }
