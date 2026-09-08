@@ -2,7 +2,9 @@ package com.Calc.calculator;
 
 import com.Calc.calculator.Model.Person;
 import com.Calc.calculator.Model.Reusable;
+import com.Calc.calculator.Service.StringService;
 import com.Calc.calculator.enums.Gender;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Comparator;
@@ -36,6 +38,14 @@ public class Circle {
         //min
 
         //people.forEach(System.out::println);
+
+       StringService stringService = new StringService();
+
+       stringService.addPeople();
+       stringService.getPeople();
+
+
+
     }
     public static List<Person> addPerson(){
 
